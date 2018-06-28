@@ -1,4 +1,5 @@
 <meta charset="UTF-8">
+<link rel="shortcut icon" href="images/favicon.png" type="image/png" />
 <link rel="stylesheet" href="css/style.css" type="text/css">
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/login.js"></script>
