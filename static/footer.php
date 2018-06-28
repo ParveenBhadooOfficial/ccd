@@ -45,7 +45,10 @@
 					<a href="gallery.php">Gallery</a>
 				</li>
 				<li>
-					<a href="blog.php">Blog</a>
+					<a href="downloads.php">Downloads</a>
+				</li>
+				<li>
+					<a href="uploads.php">Uploads</a>
 				</li>
 				<li>
 					<a href="contact.php">Contact</a>
