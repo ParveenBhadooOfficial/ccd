@@ -10,17 +10,22 @@
 				</li>
 				<li class="selected">
 					<a href="downloads.php">Downloads</a>
-					<ul>
-						<li>
-						<a href="uploads.php">Uploads</a>
-						</li>
-					</ul>
+				</li>
+				<li>
+					<a href="profile.php">Profile</a>
 				</li>
 				<li>
 					<a href="contact.php">Contact</a>
 				</li>
 				<li>
-					<input type="button" name="loginopen" id="loginopen" value="Login">
+					<?php
+				if ($_SESSION['sid']=="") {
+					require "./static/backend.loginli.php";
+				}
+				else{
+					require "./static/backend.logoutli.php";
+				}
+				?>
 				</li>
 			</ul>
 		</div>

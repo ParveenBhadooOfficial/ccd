@@ -10,30 +10,35 @@
 				</li>
 				<li>
 					<a href="downloads.php">Downloads</a>
-					<ul>
-						<li>
-						<a href="uploads.php">Uploads</a>
-						</li>
-					</ul>
+				</li>
+				<li>
+					<a href="profile.php">Profile</a>
 				</li>
 				<li>
 					<a href="contact.php">Contact</a>
 				</li>
 				<li>
-					<input type="button" name="loginopen" id="loginopen" value="Login">
+				<?php
+				if ($_SESSION['sid']=="") {
+					require "./static/backend.loginli.php";
+				}
+				else{
+					require "./static/backend.logoutli.php";
+				}
+				?>
 				</li>
 			</ul>
 		</div>
 	</div>
-	<div id="contents">
+	<div id="icontents">
 		<div>
 			<div class="body">
 				<ul id="featured">
 					<li>
 						<div>
-						 <img class="galleryimages" src="images/slider1.png" style="width:100%">
+						 <img class="galleryimages" src="images/slider4.png" style="width:100%">
   						 <img class="galleryimages" src="images/slider3.png" style="width:100%">
-  						 <img class="galleryimages" src="images/slider4.png" style="width:100%">
+  						 <img class="galleryimages" src="images/slider1.png" style="width:100%">
   						 <button class="w3-button w3-black button-display-left" onclick="plusDivs1(-1)">&#10094;</button>
   						 <button class="w3-button w3-black button-display-right" onclick="plusDivs1(1)">&#10095;</button>
 						 </div>

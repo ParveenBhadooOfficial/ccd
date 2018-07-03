@@ -10,17 +10,22 @@
 				</li>
 				<li>
 					<a href="downloads.php">Downloads</a>
-					<ul>
-						<li>
-						<a href="uploads.php">Uploads</a>
-						</li>
-					</ul>
+				</li>
+				<li>
+					<a href="profile.php">Profile</a>
 				</li>
 				<li>
 					<a href="contact.php">Contact</a>
 				</li>
 				<li>
-					<input type="button" name="loginopen" id="loginopen" value="Login">
+					<?php
+        if ($_SESSION['sid']=="") {
+          require "./static/backend.loginli.php";
+        }
+        else{
+          require "./static/backend.logoutli.php";
+        }
+        ?>
 				</li>
 			</ul>
 		</div>
@@ -29,24 +34,62 @@
 		<div>
 			<div class="body"  id="gallery">
 				<h1>Gallery</h1>
-				<div>
-						 <img class="galleryimages" src="images/gallery1.png" style="width:100%">
-						 <img class="galleryimages" src="images/gallery2.png" style="width:100%">
-  						 <img class="galleryimages" src="images/gallery3.png" style="width:100%">
-  						 <img class="galleryimages" src="images/gallery4.png" style="width:100%">
-  						 <img class="galleryimages" src="images/gallery5.png" style="width:100%">
-						 <img class="galleryimages" src="images/gallery6.png" style="width:100%">
-  						 <img class="galleryimages" src="images/gallery7.png" style="width:100%">
-  						 <img class="galleryimages" src="images/gallery8.png" style="width:100%">
-  						 <img class="galleryimages" src="images/gallery9.png" style="width:100%">
-  						 <img class="galleryimages" src="images/gallery10.png" style="width:100%">
-  						 <img class="galleryimages" src="images/gallery11.png" style="width:100%">
-				</div>
-				<div id="pagination">
-					<br>
-					<a class="previous" onclick="plusDivs1(-1)">Previous</a>
-					<a class="next" onclick="plusDivs1(1)">Next</a>
-				</div>
+				<div class="clear"></div>
+      <div class="grid_12">
+        <div class="hor_separator"></div>
+      </div>
+      <div class="grid_12">
+        <div class="car_wrap">
+          <h2>Customer's Best Choices</h2>
+          <a href="#" class="prev"></a><a href="#" class="next"></a>
+          <ul class="carousel1">
+            <li>
+              <div><img src="images/gallery1.png" alt="" width="209px" height="131px">
+              </div>
+            </li>
+            <li>
+              <div><img src="images/gallery2.png" alt="" width="209px" height="131px">
+              </div>
+            </li>
+            <li>
+              <div><img src="images/gallery3.png" alt="" width="209px" height="131px">
+              </div>
+            </li>
+            <li>
+              <div><img src="images/gallery4.png" alt="" width="209px" height="131px">
+              </div>
+            </li>
+            <li>
+              <div><img src="images/gallery5.png" alt="" width="209px" height="131px">
+              </div>
+            </li>
+            <li>
+              <div><img src="images/gallery6.png" alt="" width="209px" height="131px">
+              </div>
+            </li>
+            <li>
+              <div><img src="images/gallery7.png" alt="" width="209px" height="131px">
+              </div>
+            </li>
+            <li>
+              <div><img src="images/gallery8.png" alt="" width="209px" height="131px">
+              </div>
+            </li>
+            <li>
+              <div><img src="images/gallery9.png" alt="" width="209px" height="131px">
+              </div>
+            </li>
+            <li>
+              <div><img src="images/gallery10.png" alt="" width="209px" height="131px">
+              </div>
+            </li>
+            <li>
+              <div><img src="images/gallery11.png" alt="" width="209px" height="131px">
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
 			</div>
 		</div>
 	</div>

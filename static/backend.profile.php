@@ -12,7 +12,7 @@
 					<a href="downloads.php">Downloads</a>
 				</li>
 				<li class="selected">
-					<a href="uploads.php">Uploads</a>
+					<a href="profile.php">Profile</a>
 				</li>
 				<li>
 					<a href="contact.php">Contact</a>
@@ -33,6 +33,7 @@
 	<div id="contents">
 		<div>
 			<div class="body" id="blog">
+						<border style="color: #fff;"><?php echo $status."<br><br>"; ?></border>
 						<h1>File Upload (Complaints and Requests Only)</h1>
 						<div id="uploadsdiv">
 						<h3>Now you can send your complaints including files, You can upload your data files and content files here directly to us.</h3><br><br><br>

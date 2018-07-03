@@ -14,10 +14,10 @@
 					</div>
 				</div>
 				<div>
-					<form action="#" method="post" id="newsletter">
+					<form action="newsletter.php" method="post" id="newsletter">
 						<h4>Join Our Newsletter</h4>
-						<input type="text" value="Enter Email Address Here For Updates" onBlur="javascript:if(this.value==''){this.value=this.defaultValue;}" onFocus="javascript:if(this.value==this.defaultValue){this.value='';}">
-						<input type="submit" value="Sign up" class="btn2" />
+						<input type="email" placeholder="Enter Your Email Here" name="email" id="ValidEmail" required>
+						<input type="submit" value="signup" name="signup" class="btn2" />
 					</form>
 					<div id="connect">
 						<h4>Social Media</h4>
@@ -60,3 +60,4 @@
 		</div>
 	</div>
 <script type="text/javascript" src="js/slider.js"></script>
+<script type="text/javascript" src="js/emailvalidation.js"></script>
