@@ -34,6 +34,7 @@ img {
 	background-image: url(../images/bg-contents.png);
 	background-repeat: no-repeat;
 }
+
 .btn1, .btn2 {
 	background: url(../images/buttons.png) no-repeat;
 	cursor: pointer;
@@ -197,24 +198,31 @@ img {
 	display: block;
 }
 /*------------------------------ CONTENTS ------------------------------*/
-#contents {
+#contents, #icontents {
 	background-position: -961px top;
 	background-repeat: repeat-y;
 	width: 970px;
 	margin: 0 auto;
 }
-#contents > div {
+
+#contents, #icontents {
+	background-position: -961px top;
+	background-repeat: repeat-y;
+	width: 970px;
+	margin: 0 auto;
+}
+#contents > div, #icontents > div {
 	background-position: -1931px bottom;
 	width: 960px;
-	padding: 0 5px 10px;
+	padding: 0 5px 0px;
 }
-#contents div.body {
+#contents div.body, #icontents div.body {
 	background-position: 1px top;
 	display: inline-block;
 	width: 940px;
-	padding: 10px 10px 0;
+	padding: 0px 10px 0;
 }
-#contents div.body h1 {
+#contents div.body h1, #icontents div.body h1 {
 	color: #fff;
 	font-family: "Oswald";
 	font-size: 34px;
@@ -222,7 +230,7 @@ img {
 	margin: 0 0 18px;
 	text-transform: uppercase;
 }
-#contents p {
+#contents p, #icontents p {
 	color: #fff;
 	font-size: 14px;
 	line-height: 24px;
@@ -351,7 +359,7 @@ div.contact {
 	text-transform: uppercase;
 }
 div.contact p b {
-	color: #fff;
+	color: #686762;
 	display: block;
 	font-size: 24px;
 	font-weight: normal;
@@ -906,6 +914,16 @@ div.blog a.more:hover {
 	left:0%;
 	transform:translate(0%,-50%);
 	-ms-transform:translate(-0%,-50%);
+	background-color: transparent;
+	 border: none;
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
 }
 
 .button-display-right{
@@ -914,6 +932,16 @@ div.blog a.more:hover {
 	right:0%;
 	transform:translate(0%,-50%);
 	-ms-transform:translate(0%,-50%);
+	background-color: transparent;	
+	 border: none;
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
 }
 
 CSS:
@@ -932,7 +960,7 @@ CSS:
   background-color: orange;
   position: fixed;
   width: 500px;
-  height: 200px;
+  height: auto;
   top: 50%;
   left: 50%;
   z-index: 11;
@@ -999,4 +1027,142 @@ h2{
 	height: 459px;
 	background-image: url(../images/downloadapp.png);
 	background-repeat: no-repeat;
+}
+
+#loginform, #signupform {border: 3px solid #f1f1f1;}
+
+#uname, #psw, #fullname, #username, #password {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+#buttonlogin, #buttonsignup{
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+#buttonlogin:hover, #buttonsignup:hover {
+    opacity: 0.8;
+}
+
+.cancelbtn {
+    width: auto;
+    color: white;
+    padding: 14px 20px;
+    background-color: #4CAF50;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.cancelbtn:hover{
+	opacity: 0.8;
+}
+
+.container1 {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+
+.loginlabel {
+	color: #fff;
+}
+
+.carousel1 {
+	height: 249px;
+}
+
+.carousel1 li {
+	list-style-type: none;
+	float: left;
+	width: 240px !important;
+	font-size: 12px;
+}
+
+.carousel1 li >div {
+	padding: 0 10px;
+}
+
+.carousel1 li .price {
+	display: inline-block;
+	background: #699440;
+	color: #fff;
+	min-width: 41px;
+	height: 38px;
+	border-radius: 4px;
+	font: 20px/36px 'Lobster', cursive;
+	text-align: center;
+	margin-top: 15px;
+}
+
+
+.carousel1 li span {
+	line-height: 16px;
+}
+
+.carousel1 img {
+	box-shadow: 2px 2px 3px #ddd;
+	padding: 4px;
+	background: #fff;
+	border: 1px solid #e6e4e4;
+	 -moz-box-sizing: border-box;
+ -webkit-box-sizing: border-box;
+ -o-box-sizing: border-box;
+ box-sizing: border-box;
+ margin-bottom: 19px;
+}
+
+.prev {
+	background: url(../images/prevnext.png) 0 bottom no-repeat;
+	display: block;
+	position: absolute;
+	right: 42px;
+	top: 9px;
+	width: 32px;
+	z-index: 999;
+	height: 30px;
+}
+
+.prev:hover {
+	background-position: 0 0;
+}
+
+.next {
+	background: url(../images/prevnext.png) right bottom no-repeat;
+	display: block;
+	z-index: 999;
+	position: absolute;
+	right: 10px;
+	top: 9px;
+	width: 32px;
+	height: 30px;
+}
+
+.next:hover {
+	background-position: right 0;
 }
